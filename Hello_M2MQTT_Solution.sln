@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Subscribe_ConsoleApp"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Publish_WinFormsApp", "Hello_Publish_WinFormsApp\Hello_Publish_WinFormsApp.csproj", "{D14DEE5C-8799-451F-8BED-9B0E0F6A11E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Subscribe_WinFormsApp", "Hello_Subscribe_WinFormsApp\Hello_Subscribe_WinFormsApp.csproj", "{84B36AEE-17DD-42BA-9602-B3D241B166BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D14DEE5C-8799-451F-8BED-9B0E0F6A11E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D14DEE5C-8799-451F-8BED-9B0E0F6A11E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D14DEE5C-8799-451F-8BED-9B0E0F6A11E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B36AEE-17DD-42BA-9602-B3D241B166BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B36AEE-17DD-42BA-9602-B3D241B166BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B36AEE-17DD-42BA-9602-B3D241B166BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B36AEE-17DD-42BA-9602-B3D241B166BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
