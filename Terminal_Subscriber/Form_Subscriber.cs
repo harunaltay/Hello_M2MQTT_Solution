@@ -11,13 +11,14 @@ using System.Windows.Forms;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
-namespace Hello_Subscribe_WinFormsApp
+namespace Terminal_Subscriber
 {
-    public partial class Form_Subscribe : Form
+    public partial class Form_Subscriber : Form
     {
         MqttClient client;
+        string topic = "/terminal";
 
-        public Form_Subscribe()
+        public Form_Subscriber()
         {
             InitializeComponent();
 
@@ -30,7 +31,7 @@ namespace Hello_Subscribe_WinFormsApp
 
             // subscribe to the topic "/home/temperature" with QoS 2
             client.Subscribe
-                (new string[] { "/hello" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+                (new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
         }
 
         void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
@@ -39,12 +40,26 @@ namespace Hello_Subscribe_WinFormsApp
             byte[] buffer = e.Message;
             string s = System.Text.Encoding.UTF8.GetString(buffer, 0, buffer.Length);
 
-            //Console.WriteLine(s);
+            DateTime dateTime = DateTime.Now;
 
-            textBox1.Text += s + "\r\n";
+            if (s.Contains("green"))
+            {
+                label1.BackColor = Color.Lime;
+                label1.Text = "ON";
+                textBox1.Text += "green \t- " + dateTime.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + "\t" + topic  + "\r\n"; 
+                // + Environment.NewLine da olabilir
+            }
+            else if (s.Contains("red"))
+            {
+                label1.BackColor = Color.Red;
+                label1.Text = "OFF";
+                textBox1.Text += "red \t- " + dateTime.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + "\t" + topic + "\r\n";
+                //textBox1.AppendText("red" + "\r\n");
+            }
+
         }
 
-        private void Form_Subscribe_FormClosed(object sender, FormClosedEventArgs e)
+        private void Form_Subscriber_FormClosed(object sender, FormClosedEventArgs e)
         {
             client.Disconnect();
         }

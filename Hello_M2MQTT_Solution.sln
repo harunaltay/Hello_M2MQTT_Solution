@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Publish_WinFormsApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello_Subscribe_WinFormsApp", "Hello_Subscribe_WinFormsApp\Hello_Subscribe_WinFormsApp.csproj", "{84B36AEE-17DD-42BA-9602-B3D241B166BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal_Subscriber", "Terminal_Subscriber\Terminal_Subscriber.csproj", "{45B8C6E0-3723-482E-82A3-6D557C47B1CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal_Publisher", "Terminal_Publisher\Terminal_Publisher.csproj", "{D15368F7-86CC-4626-9673-F9FC1756ACCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{84B36AEE-17DD-42BA-9602-B3D241B166BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B36AEE-17DD-42BA-9602-B3D241B166BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84B36AEE-17DD-42BA-9602-B3D241B166BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B8C6E0-3723-482E-82A3-6D557C47B1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B8C6E0-3723-482E-82A3-6D557C47B1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B8C6E0-3723-482E-82A3-6D557C47B1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B8C6E0-3723-482E-82A3-6D557C47B1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D15368F7-86CC-4626-9673-F9FC1756ACCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15368F7-86CC-4626-9673-F9FC1756ACCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15368F7-86CC-4626-9673-F9FC1756ACCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15368F7-86CC-4626-9673-F9FC1756ACCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,6 +49,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form_Publish";
             this.Text = "Form - Publish M2MQTT";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Publish_FormClosed);
             this.ResumeLayout(false);
 
         }

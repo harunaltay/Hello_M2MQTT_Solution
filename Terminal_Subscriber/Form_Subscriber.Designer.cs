@@ -1,6 +1,6 @@
-﻿namespace Hello_Subscribe_WinFormsApp
+﻿namespace Terminal_Subscriber
 {
-    partial class Form_Subscribe
+    partial class Form_Subscriber
     {
         /// <summary>
         /// Required designer variable.
@@ -29,25 +29,36 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(50, 52);
+            this.textBox1.Location = new System.Drawing.Point(351, 50);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(696, 353);
+            this.textBox1.Size = new System.Drawing.Size(408, 358);
             this.textBox1.TabIndex = 0;
             // 
-            // Form_Subscribe
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(124, 190);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 39);
+            this.label1.TabIndex = 1;
+            // 
+            // Form_Subscriber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form_Subscribe";
-            this.Text = "Form1";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Subscribe_FormClosed);
+            this.Name = "Form_Subscriber";
+            this.Text = "Subscriber";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Subscriber_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +67,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

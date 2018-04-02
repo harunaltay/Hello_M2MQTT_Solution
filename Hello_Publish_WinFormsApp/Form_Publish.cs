@@ -37,5 +37,10 @@ namespace Hello_Publish_WinFormsApp
             // publish a message on "/home/temperature" topic with QoS 2
             client.Publish("/hello", Encoding.UTF8.GetBytes(strValue)  /*, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE */ );
         }
+
+        private void Form_Publish_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            client.Disconnect();
+        }
     }
 }
