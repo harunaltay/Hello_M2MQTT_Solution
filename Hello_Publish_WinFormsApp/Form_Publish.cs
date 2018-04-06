@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using uPLibrary.Networking.M2Mqtt;
 
 namespace Hello_Publish_WinFormsApp
 {
+    public partial class Terminal
+    {
+        public int Id { get; set; }
+        public string message { get; set; }
+        public string datetime { get; set; }
+        public string topic { get; set; }
+    }
+
     public partial class Form_Publish : Form
     {
         MqttClient client;
@@ -29,13 +31,8 @@ namespace Hello_Publish_WinFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Merhaba WinForms!");
-
-            //string strValue = Convert.ToString(value);
-            string strValue = "Merhaba Publish WinForms M2MQTT";
-
-            // publish a message on "/home/temperature" topic with QoS 2
-            client.Publish("/hello", Encoding.UTF8.GetBytes(strValue)  /*, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE */ );
+            // client.Publish("/hello", Encoding.UTF8.GetBytes(strValue)  /*, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE */ );
+            client.Publish("/hello", Encoding.UTF8.GetBytes("Hello from Publish"));
         }
 
         private void Form_Publish_FormClosed(object sender, FormClosedEventArgs e)
