@@ -18,3 +18,5 @@ Client subscriber m2mqtt: Terminal_Subscriber
 Web API writer to db: Hello_Web_API_Solution/Hello2_Web_API_Empty_WebApp
 
 DB/Table: TerminalDB2/Terminal
+
+topic: /terminal (hard coded)
